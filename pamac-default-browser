@@ -1,0 +1,9 @@
+#! /usr/bin/zsh
+
+xdg-mime default $1.desktop x-scheme-handler/https
+xdg-mime default $1.desktop x-scheme-handler/http
+
+echo "default for https: "
+xdg-mime query default x-scheme-handler/https
+echo "default for http: "
+xdg-mime query default x-scheme-handler/http
